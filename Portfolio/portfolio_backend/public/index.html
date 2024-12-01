@@ -194,8 +194,17 @@
                     <textarea id="message" name="message" placeholder="Your Message" required style="text-align: center;"></textarea>
                     <span class="error-message" id="messageError"></span>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
                 <p id="thankYouMessage" style="display: none;">Thank You! Your message has been sent.</p>
+                <script>
+                    document.addEventListener(
+                          'DOMContentLoaded', () => {
+                        document.getElementById('submit-btn').
+                            addEventListener('click', function () {
+                                alert('Thank You! Your message has been sent.');
+                            });
+                    });
+                </script>
             </form>
             <div class="contact-info">
                 <h3>Contact Info</h3>
